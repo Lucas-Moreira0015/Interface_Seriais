@@ -31,5 +31,5 @@ Os estados dos LEDs seguem uma lógica específica, alternando conforme a entrad
 ## Autor
 **Lucas Moreira da Silva**
 
-Link do video: 
+Link do video: https://drive.google.com/file/d/1hLVlNPllrScDk0_Sn2cB0W-VVckeoXxp/view?usp=sharing
 
