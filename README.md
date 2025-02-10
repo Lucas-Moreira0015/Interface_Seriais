@@ -1,37 +1,35 @@
-Interfaces de comunicaÁ„o serial na BitDogLab
+# Interfaces de Comunica√ß√£o Serial na BitDogLab
 
-DescriÁ„o:
+## Descri√ß√£o
+Este projeto implementa o controle de LEDs e a exibi√ß√£o de caracteres na matriz de LEDs e no display da BitDogLab. A l√≥gica do sistema permite a altern√¢ncia de estados dos LEDs e a exibi√ß√£o de letras (A-Z, a-z) e n√∫meros (0-9) tanto no display quanto na matriz de LEDs.
 
-Este projeto implementa o controle de LEDs e a exibiÁ„o de caracteres na matriz de LEDs e no display da BitDogLab. A lÛgica do sistema permite a altern‚ncia de estados de LEDs e a exibiÁ„o de letras (A-Z, a-z) e n˙meros (0-9) tanto no display quanto na matriz de LEDs.
+Os estados dos LEDs seguem uma l√≥gica espec√≠fica, alternando conforme a entrada dos bot√µes, enquanto os caracteres s√£o processados e exibidos corretamente nos dispositivos de sa√≠da.
 
-Os estados dos LEDs seguem uma lÛgica especÌfica, alternando conforme a entrada dos botıes, enquanto os caracteres s„o processados e exibidos corretamente nos dispositivos de saÌda.
+## Componentes Necess√°rios
+- **BitDogLab** (com matriz de LEDs, display e bot√µes)
+- **Microcontrolador RP2040**
+- **Bibliotecas** para controle do display e da matriz de LEDs
 
-Componentes Necess·rios:
+## Funcionamento
+### Controle dos LEDs
+- Quando os bot√µes s√£o pressionados, os LEDs alternam entre os estados definidos.
+- O estado dos LEDs √© atualizado no display e tamb√©m enviado para o monitor serial.
 
-BitDogLab (com matriz de LEDs, display e botıes)
-Microcontrolador RP2040
-Bibliotecas para controle do display e da matriz de LEDs
+### Exibi√ß√£o de Caracteres
+- O sistema reconhece e processa caracteres alfanum√©ricos (A-Z, a-z, 0-9).
+- O caractere atual √© exibido no display OLED e, para n√∫meros, tamb√©m h√° exibi√ß√£o na matriz de LEDs.
 
-Funcionamento:
+## Interrup√ß√µes e Debouncing
+- O c√≥digo implementa uma l√≥gica de **interrup√ß√£o** para responder rapidamente √† entrada dos bot√µes.
+- Um mecanismo de **debouncing** evita m√∫ltiplos acionamentos acidentais.
 
-No controle dos LEDs, quando os botıes s„o pressionados, os LEDs alternam entre os estados definidos.
-O estado dos LEDs È atualizado no display, e tambÈm È enviado para o serial monitor.
+## Estrutura do C√≥digo
+1. **Inicializa√ß√£o:** Configura os pinos GPIO para LEDs e bot√µes.
+2. **Interrup√ß√µes:** Monitora os bot√µes e altera o estado dos LEDs e dos caracteres exibidos.
+3. **Renderiza√ß√£o:** Atualiza o display e a matriz de LEDs com as informa√ß√µes atuais.
 
-Na exibiÁ„o de Caracteres, o sistema reconhece e processa caracteres alfanumÈricos (A-Z, a-z, 0-9).
-O caractere atual È exibido no display OLED, e para os n˙meros tem exibiÁ„o na matriz de LEDs.
+## Autor
+**Lucas Moreira da Silva**
 
-InterrupÁıes e Debouncing:
+Link do video: 
 
-O cÛdigo implementa uma lÛgica de interrupÁ„o para responder rapidamente ‡ entrada dos botıes.
-Um mecanismo de debouncing evita m˙ltiplos acionamentos acidentais.
-
-Estrutura do CÛdigo:
-
-InicializaÁ„o: Configura os pinos GPIO para LEDs e botıes.
-InterrupÁıes: Monitora os botıes e altera o estado dos LEDs e dos caracteres exibidos.
-RenderizaÁ„o: Atualiza o display e a matriz de LEDs com as informaÁıes atuais.
-
-Autor:
-Mateus Moreira da Silva
-
-Este projeto foi desenvolvido e testado utilizando a BitDogLab com o microcontrolador RP2040.
