@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "Daniel Santos",
+  "author": "Lucas Moreira da Silva",
   "editor": "wokwi",
   "parts": [
     {
@@ -49,21 +49,21 @@
       "type": "wokwi-pushbutton",
       "id": "btn1",
       "top": 35,
-      "left": -672,
+      "left": -691.2,
       "attrs": { "color": "green" }
     },
     {
       "type": "wokwi-pushbutton",
       "id": "btn2",
       "top": 92.6,
-      "left": -672,
+      "left": -691.2,
       "attrs": { "color": "green" }
     },
     {
       "type": "board-ssd1306",
       "id": "oled1",
-      "top": 223.94,
-      "left": -748.57,
+      "top": 252.74,
+      "left": -825.37,
       "attrs": { "i2cAddress": "0x3c" }
     },
     {
@@ -94,7 +94,7 @@
       "left": -835.2,
       "attrs": { "value": "330" }
     },
-    { "type": "wokwi-vcc", "id": "vcc6", "top": 202.36, "left": -739.2, "attrs": {} }
+    { "type": "wokwi-vcc", "id": "vcc6", "top": 202.36, "left": -854.4, "attrs": {} }
   ],
   "connections": [
     [ "pico:GP0", "$serialMonitor:RX", "", [] ],
@@ -183,7 +183,7 @@
     [ "rgb23:VSS", "gnd5:GND", "green", [ "v0" ] ],
     [ "rgb24:VSS", "gnd5:GND", "green", [ "v0" ] ],
     [ "rgb25:VSS", "gnd5:GND", "black", [ "v0" ] ],
-    [ "rgb1:DIN", "pico:GP7", "red", [ "h76", "v192", "h-835.2", "v-153.6" ] ],
+    [ "rgb1:DIN", "pico:GP7", "red", [ "h76", "v86.4", "h-480", "v-67.2" ] ],
     [ "pico:GP5", "btn1:2.r", "green", [ "h0" ] ],
     [ "btn1:1.r", "pico:GND.1", "green", [ "v0" ] ],
     [ "pico:GP6", "btn2:1.r", "green", [ "h0" ] ],
